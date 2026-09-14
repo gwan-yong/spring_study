@@ -8,9 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <div th:each="n:${notice}">
-        <h4 th:text="${n.title}">제목</h4>
-        <p th:text="${n.date}">날짜</p>
-    </div>
+<div th:each="i:${scheduled}">
+    <h4 th:text="${i.title}">제목</h4>
+    <p th:text="${i.scheduledAt}">날짜</p>
+</div>
+
 </body>
 </html>
