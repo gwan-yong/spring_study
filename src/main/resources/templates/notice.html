@@ -6,13 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="/main.css" rel="stylesheet">
 </head>
 <body>
-    <div class = "card" th:each="i :${data}">
-        <img>
-        <h4 th:text="${i.title}">상품명</h4>
-        <p th:text="${i.price}">가격</p>
+    <div th:each="n:${notice}">
+        <h4 th:text="${n.title}">제목</h4>
+        <p th:text="${n.date}">날짜</p>
     </div>
+
 </body>
 </html>
