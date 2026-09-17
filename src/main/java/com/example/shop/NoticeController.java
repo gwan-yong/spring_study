@@ -21,6 +21,7 @@ public class NoticeController {
 
         model.addAttribute("notice", noticeList);
         return "notice.html";
-
     }
+
+    public String addNotice()
 }

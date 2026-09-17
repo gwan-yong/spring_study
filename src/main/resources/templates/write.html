@@ -9,12 +9,13 @@
     <link href="/main.css" rel="stylesheet">
 </head>
 <body>
-    <div th:replace="~{nav.html::navbar}"></div>
+<div th:replace="~{nav.html::navbar}"></div>
 
-    <div class = "card" th:each="i :${data}">
-        <img>
-        <h4 th:text="${i.title}">상품명</h4>
-        <p th:text="${i.price}">가격</p>
-    </div>
+<form action="/add" method="POST">
+    <input name = "title">
+    <input name = "price">
+    <button type="submit">전송</button>
+</form>
+</div>
 </body>
 </html>

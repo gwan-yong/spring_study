@@ -1,16 +1,20 @@
 package com.example.shop;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 @Entity
 @ToString
+@Getter
+@Setter
 public class Item {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
+    private Long id;
 
     @Column(nullable = false , unique = true, columnDefinition = "Text")
-    public String title;
+    private String title;
     @Column(nullable = false)
-    public Integer price;
+    private Integer price;
 }
