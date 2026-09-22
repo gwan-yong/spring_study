@@ -4,6 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -23,5 +25,14 @@ public class NoticeController {
         return "notice.html";
     }
 
-    public String addNotice()
+    @GetMapping("/writenotice")
+    public String writeNotice() {
+        return "writenotice.html";
+    }
+
+    @PostMapping("/addnotice")
+    public String addNotice(@ModelAttribute Notice notice){
+        noticeRepository.save(notice);
+        return "redirect:/notice";
+    }
 }
