@@ -3,18 +3,24 @@ package com.example.shop;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
+@Getter
+@Setter
 public class Scheduled {
-
     @Id
     @GeneratedValue
-    public Long id;
+    private Long id;
 
-    public String title;
-    public LocalDateTime scheduledAt;
+    private String title;
+    private LocalDateTime createAt;
+
+
+
 
 
 }
